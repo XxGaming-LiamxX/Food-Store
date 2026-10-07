@@ -127,6 +127,7 @@ $("submit").onclick=()=>{
   ["name","title","body"].forEach(i=>$(i).value="");rating=0;[...$("pick").children].forEach(k=>k.classList.remove("on"));
   $("msg").style.color="#2e7d32";$("msg").textContent="Thanks! Your review has been added.";
   $("prodFilter").value="";$("sort").value="new";summary();list();
+<a href="reviews.html">Reviews</a>
 };
 summary();list();
 </script>
