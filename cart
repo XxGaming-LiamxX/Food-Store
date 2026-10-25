@@ -92,3 +92,9 @@ nav a{
 
 .cart-item button{
     background:red;
+index.htmlHome</a>
+order.htmlOrder</a>
+<a href="index.html">Home</a>
+<a href="order.html">Order</a>
+<a href="cart.html">Cart</a>
+<a href="contact.html">Contact</a>
