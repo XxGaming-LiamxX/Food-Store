@@ -96,42 +96,58 @@
             <img src="https://via.placeholder.com/150" alt="Apples">
             <h3>Fresh Apples</h3>
             <p>$3.99 / kg</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Fresh Apples', 3.99)">
+    Add to Cart
+</button>
         </div>
 
         <div class="item">
             <img src="https://via.placeholder.com/150" alt="Bananas">
             <h3>Bananas</h3>
             <p>$2.49 / kg</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Bananas', 2.49)">
+    Add to Cart
+</button>
         </div>
 
         <div class="item">
             <img src="https://via.placeholder.com/150" alt="Milk">
             <h3>Full Cream Milk</h3>
             <p>$1.99</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Full Cream Milk', 1.99)">
+    Add to Cart
+</button>
         </div>
 
         <div class="item">
             <img src="https://via.placeholder.com/150" alt="Bread">
             <h3>Wholegrain Bread</h3>
             <p>$2.50</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Wholegrain Bread', 2.50)">
+    Add to Cart
+</button>
+</button>
         </div>
 
         <div class="item">
             <img src="https://via.placeholder.com/150" alt="Eggs">
             <h3>Free Range Eggs</h3>
             <p>$4.99</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Free Range Eggs', 4.99)">
+    Add to Cart
+</button>
+    
+</button>
         </div>
 
         <div class="item">
             <img src="https://via.placeholder.com/150" alt="Chicken">
             <h3>Chicken Breast</h3>
             <p>$8.99 / kg</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Chicken Breast', 8.99)">
+    Add to Cart
+</button>
+</button>
         </div>
 
     </div>
@@ -144,8 +160,7 @@
 </body>
 </html>
 <script>
-function addToCart(name, price) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
 
     cart.push({
         name: name,
@@ -158,8 +173,7 @@ function addToCart(name, price) {
 }
 </script>
 <script>
-function addToCart(name, price) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
 
     cart.push({
         name: name,
