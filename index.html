@@ -1,190 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>FreshMart Grocery Store</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f5f5f5;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FreshMart Grocery Store</title>
 
-        header {
-            background: #4CAF50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+<style>
+body{
+    font-family:Arial,sans-serif;
+    margin:0;
+    background:#f5f5f5;
+}
 
-        nav {
-            background: #333;
-            padding: 10px;
-            text-align: center;
-        }
+header{
+    background:#4CAF50;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
 
-        nav a {
-            color: white;
-            margin: 15px;
-            text-decoration: none;
-            font-size: 18px;
-        }
+nav{
+    background:#333;
+    padding:10px;
+    text-align:center;
+}
 
-        .container {
-            width: 90%;
-            margin: auto;
-            padding: 20px;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+}
 
-        .item-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
+.container{
+    width:90%;
+    margin:auto;
+    padding:20px;
+}
 
-        .item {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #ccc;
-            text-align: center;
-        }
+.item-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
 
-        .item img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-        }
+.item{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
 
-        .item button {
-            background: #4CAF50;
-            color: white;
-            padding: 10px;
-            border: none;
-            margin-top: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+.item img{
+    width:150px;
+    height:150px;
+    object-fit:cover;
+}
 
-        footer {
-            background: #333;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            margin-top: 30px;
-        }
-    </style>
+button{
+    background:#4CAF50;
+    color:white;
+    border:none;
+    padding:10px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#45a049;
+}
+
+#cart{
+    background:white;
+    margin-top:30px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+.cart-item{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 0;
+    border-bottom:1px solid #ddd;
+}
+
+footer{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>FreshMart Grocery Store</h1>
-    <p>Your daily fresh food delivered</p>
+<h1>FreshMart Grocery Store</h1>
+<p>Your Daily Grocery Shop</p>
 </header>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="contact.html">Contact</a>
+<a href="#">Home</a>
 </nav>
 
 <div class="container">
-    <h2>Popular Items</h2>
 
-    <div class="item-grid">
+<h2>Products</h2>
 
-        <div class="item">
-            <img src="https://via.placeholder.com/150" alt="Apples">
-            <h3>Fresh Apples</h3>
-            <p>$3.99 / kg</p>
-            <button onclick="addToCart('Fresh Apples', 3.99)">
-    Add to Cart
-</button>
-        </div>
+<div class="item-grid">
 
-        <div class="item">
-            <img src="https://via.placeholder.com/150" alt="Bananas">
-            <h3>Bananas</h3>
-            <p>$2.49 / kg</p>
-            <button onclick="addToCart('Bananas', 2.49)">
-    Add to Cart
-</button>
-        </div>
+<div class="item">
+<img src="https://via.placeholder.com/150" alt="Apples">
+<h3>Fresh Apples</h3>
+<p>$3.99</p>
+<button onclick="addToCart('Fresh Apples',3.99)">Add To Cart</button>
+</div>
 
-        <div class="item">
-            <img src="https://via.placeholder.com/150" alt="Milk">
-            <h3>Full Cream Milk</h3>
-            <p>$1.99</p>
-            <button onclick="addToCart('Full Cream Milk', 1.99)">
-    Add to Cart
-</button>
-        </div>
+<div class="item">
+<img src="https://via.placeholder.com/150" alt="Bananas">
+<h3>Bananas</h3>
+<p>$2.49</p>
+<button onclick="addToCart('Bananas',2.49)">Add To Cart</button>
+</div>
 
-        <div class="item">
-            <img src="https://via.placeholder.com/150" alt="Bread">
-            <h3>Wholegrain Bread</h3>
-            <p>$2.50</p>
-            <button onclick="addToCart('Wholegrain Bread', 2.50)">
-    Add to Cart
-</button>
-</button>
-        </div>
+<div class="item">
+<img src="https://via.placeholder.com/150" alt="Milk">
+<h3>Milk</h3>
+<p>$1.99</p>
+<button onclick="addToCart('Milk',1.99)">Add To Cart</button>
+</div>
 
-        <div class="item">
-            <img src="https://via.placeholder.com/150" alt="Eggs">
-            <h3>Free Range Eggs</h3>
-            <p>$4.99</p>
-            <button onclick="addToCart('Free Range Eggs', 4.99)">
-    Add to Cart
-</button>
-    
-</button>
-        </div>
+<div class="item">
+<img src="https://via.placeholder.com/150" alt="Bread">
+<h3>Bread</h3>
+<p>$2.50</p>
+<button onclick="addToCart('Bread',2.50)">Add To Cart</button>
+</div>
 
-        <div class="item">
-            <img src="https://via.placeholder.com/150" alt="Chicken">
-            <h3>Chicken Breast</h3>
-            <p>$8.99 / kg</p>
-            <button onclick="addToCart('Chicken Breast', 8.99)">
-    Add to Cart
-</button>
-</button>
-        </div>
+<div class="item">
+<img src="https://via.placeholder.com/150" alt="Eggs">
+<h3>Eggs</h3>
+<p>$4.99</p>
+<button onclick="addToCart('Eggs',4.99)">Add To Cart</button>
+</div>
 
-    </div>
+<div class="item">
+<img src="https://via.placeholder.com/150" alt="Chicken">
+<h3>Chicken Breast</h3>
+<p>$8.99</p>
+<button onclick="addToCart('Chicken Breast',8.99)">Add To Cart</button>
+</div>
+
+</div>
+
+<div id="cart">
+<h2>Cart</h2>
+
+<div id="cartItems"></div>
+
+<h3>Total: $<span id="total">0.00</span></h3>
+
+<button onclick="clearCart()">
+Clear Cart
+</button>
+
+</div>
+
 </div>
 
 <footer>
-    <p>FreshMart Grocery Store © 2026</p>
+<p>FreshMart Grocery Store © 2026</p>
 </footer>
+
+<script>
+
+let cart = [];
+
+function addToCart(name, price){
+
+    cart.push({
+        name:name,
+        price:price
+    });
+
+    updateCart();
+}
+
+function updateCart(){
+
+    const cartItems =
+    document.getElementById("cartItems");
+
+    let total = 0;
+
+    cartItems.innerHTML = "";
+
+    for(let i = 0; i < cart.length; i++){
+
+        total += cart[i].price;
+
+        cartItems.innerHTML +=
+        "<div class='cart-item'>" +
+        "<span>" + cart[i].name + "</span>" +
+        "<span>$" + cart[i].price.toFixed(2) + "</span>" +
+        "</div>";
+    }
+
+    document.getElementById("total").textContent =
+    total.toFixed(2);
+}
+
+function clearCart(){
+
+    cart = [];
+
+    updateCart();
+}
+
+</script>
 
 </body>
 </html>
-<script>
-
-
-    cart.push({
-        name: name,
-        price: price
-    });
-
-    localStorage.setItem("cart", JSON.stringify(cart));
-
-    alert(name + " added to cart!");
-}
-</script>
-<script>
-
-
-    cart.push({
-        name: name,
-        price: price
-    });
-
-    localStorage.setItem("cart", JSON.stringify(cart));
-
-    alert(name + " added to cart!");
-}
-</script>
 
 
 
